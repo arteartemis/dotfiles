@@ -1,7 +1,14 @@
 [ -f ~/.stripe-repos.sh ] && . ~/.stripe-repos.sh
 [ -f ~/.rbenvrc ] && . ~/.rbenvrc
 
+export PATH="$HOME/stripe/password-vault/bin:$PATH"
+export PATH="$HOME/stripe/space-commander/bin:$PATH"
+export PATH="$HOME/stripe/henson/bin:$PATH"
+
+export PATH="$PATH:$HOME/stripe/sorbet/bazel-bin/main"
+
 # preserve the ability to shift-tab complete
+
 bindkey '^[[Z' reverse-menu-complete
 
 # history
@@ -46,6 +53,7 @@ PROMPT='%1/ %F{blue}${vcs_info_msg_0_} ● %f'
 
 # aliases
 alias ps='cd ~/stripe/pay-server'
+alias srb='cd ~/stripe/sorbet'
 alias stripe='cd ~/stripe'
 alias zoo='cd ~/stripe/zoolander'
 alias up='cd ..'
